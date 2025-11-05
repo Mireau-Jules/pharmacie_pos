@@ -1,0 +1,229 @@
+/* ============================================
+   Pharmacie Les 4 Saisons - Global Stylesheet
+   ============================================ */
+
+/* Couleurs principales */
+* {
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+QMainWindow, QDialog {
+    background-color: #f5f5f5;
+}
+
+/* Boutons principaux */
+QPushButton {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    min-height: 35px;
+}
+
+QPushButton:hover {
+    background-color: #1976D2;
+}
+
+QPushButton:pressed {
+    background-color: #0D47A1;
+}
+
+QPushButton:disabled {
+    background-color: #BDBDBD;
+    color: #757575;
+}
+
+/* Boutons danger (suppression) */
+QPushButton[danger="true"] {
+    background-color: #f44336;
+}
+
+QPushButton[danger="true"]:hover {
+    background-color: #d32f2f;
+}
+
+/* Boutons secondaires */
+QPushButton[secondary="true"] {
+    background-color: #757575;
+}
+
+QPushButton[secondary="true"]:hover {
+    background-color: #616161;
+}
+
+/* Champs de saisie */
+QLineEdit, QTextEdit, QSpinBox, QDoubleSpinBox, QComboBox {
+    border: 2px solid #E0E0E0;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: white;
+    font-size: 14px;
+    min-height: 30px;
+}
+
+QLineEdit:focus, QTextEdit:focus, QSpinBox:focus, 
+QDoubleSpinBox:focus, QComboBox:focus {
+    border-color: #2196F3;
+}
+
+QLineEdit:disabled, QTextEdit:disabled, QSpinBox:disabled,
+QDoubleSpinBox:disabled, QComboBox:disabled {
+    background-color: #F5F5F5;
+    color: #9E9E9E;
+}
+
+/* Labels */
+QLabel {
+    color: #424242;
+    font-size: 14px;
+}
+
+QLabel[heading="true"] {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1976D2;
+}
+
+/* Tables */
+QTableWidget, QTableView {
+    border: 1px solid #E0E0E0;
+    background-color: white;
+    gridline-color: #E0E0E0;
+    selection-background-color: #2196F3;
+    selection-color: white;
+}
+
+QTableWidget::item, QTableView::item {
+    padding: 5px;
+}
+
+QTableWidget::item:alternate, QTableView::item:alternate {
+    background-color: #FAFAFA;
+}
+
+QHeaderView::section {
+    background-color: #2196F3;
+    color: white;
+    padding: 8px;
+    border: none;
+    font-weight: bold;
+}
+
+/* GroupBox */
+QGroupBox {
+    border: 2px solid #E0E0E0;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+    color: #424242;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 5px;
+}
+
+/* Menu Bar */
+QMenuBar {
+    background-color: #1976D2;
+    color: white;
+    padding: 5px;
+}
+
+QMenuBar::item {
+    background-color: transparent;
+    padding: 8px 12px;
+}
+
+QMenuBar::item:selected {
+    background-color: #1565C0;
+}
+
+/* Status Bar */
+QStatusBar {
+    background-color: #37474F;
+    color: white;
+}
+
+/* Scroll Bar */
+QScrollBar:vertical {
+    border: none;
+    background: #F5F5F5;
+    width: 12px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: #BDBDBD;
+    min-height: 20px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #9E9E9E;
+}
+
+/* Message Box */
+QMessageBox {
+    background-color: white;
+}
+
+QMessageBox QPushButton {
+    min-width: 80px;
+}
+
+/* Tab Widget */
+QTabWidget::pane {
+    border: 1px solid #E0E0E0;
+    background-color: white;
+}
+
+QTabBar::tab {
+    background-color: #EEEEEE;
+    color: #424242;
+    padding: 10px 20px;
+    border: 1px solid #E0E0E0;
+    border-bottom: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+QTabBar::tab:selected {
+    background-color: white;
+    color: #2196F3;
+    font-weight: bold;
+}
+
+QTabBar::tab:hover {
+    background-color: #E3F2FD;
+}
+
+/* Tool Button */
+QToolButton {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+}
+
+QToolButton:hover {
+    background-color: #E3F2FD;
+    border-radius: 4px;
+}
+
+/* Progress Bar */
+QProgressBar {
+    border: 2px solid #E0E0E0;
+    border-radius: 4px;
+    text-align: center;
+    background-color: white;
+}
+
+QProgressBar::chunk {
+    background-color: #4CAF50;
+    border-radius: 2px;
+}
