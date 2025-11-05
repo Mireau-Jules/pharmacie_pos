@@ -5,19 +5,26 @@
 #include <QSqlDatabase>
 #include <QString>
 
-class DatabaseManager : public QObject {
-    Q_OBJECT
-
+class DatabaseManager {
 public:
-    explicit DatabaseManager(QObject *parent = nullptr);
-    ~DatabaseManager();
-
+    // Singleton pattern
+    static DatabaseManager& instance();
+    
     bool connectToDatabase(const QString &dbPath);
     bool initializeSchema(const QString &schemaPath);
     QSqlDatabase getDatabase() const;
+    bool isConnected() const;
+    
+    // Empêcher la copie
+    DatabaseManager(const DatabaseManager&) = delete;
+    DatabaseManager& operator=(const DatabaseManager&) = delete;
 
 private:
+    DatabaseManager() = default;
+    ~DatabaseManager();
+    
     QSqlDatabase db;
+    bool connected = false;
 };
 
 #endif // DATABASEMANAGER_H

@@ -7,7 +7,7 @@
 
 class ProductController : public QObject {
     Q_OBJECT
-
+    bool validateProduct(const Product &product, QString &errorMsg);
 public:
     explicit ProductController(QObject *parent = nullptr);
 

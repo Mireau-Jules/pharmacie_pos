@@ -10,8 +10,12 @@ public:
     QString passwordHash;
     QString role;
 
-    User();
+    User(); // Invalid user
     User(int id, const QString &username, const QString &passwordHash, const QString &role);
+    
+    bool isValid() const { return id > 0; }
+    bool isManager() const { return role == "Gérant"; }
+    bool isCashier() const { return role == "Caissier"; }
 };
 
 #endif // USER_H

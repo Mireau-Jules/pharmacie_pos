@@ -15,6 +15,8 @@ public:
 
     Sale();
     Sale(int id, int userId, double total, double cashReceived, double changeAmount, const QDateTime &createdAt);
+    
+    bool isValid() const { return id > 0; }
 };
 
 #endif // SALE_H

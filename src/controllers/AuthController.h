@@ -9,7 +9,16 @@ class AuthController : public QObject {
 
 public:
     explicit AuthController(QObject *parent = nullptr);
+    
     User authenticate(const QString &username, const QString &password);
+    bool createUser(const QString &username, const QString &password, const QString &role);
+    
+    // Méthodes utilitaires
+    static QString hashPassword(const QString &password);
+    static bool verifyPassword(const QString &password, const QString &hash);
+
+private:
+    User* currentUser = nullptr;
 };
 
 #endif // AUTHCONTROLLER_H

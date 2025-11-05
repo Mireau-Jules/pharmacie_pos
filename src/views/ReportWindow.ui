@@ -1,0 +1,44 @@
+cat > ReportWindow.ui << 'EOF'
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ReportWindow</class>
+ <widget class="QWidget" name="ReportWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Rapports</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <widget class="QWidget" name="salesTab">
+      <attribute name="title">
+       <string>Ventes</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="stockTab">
+      <attribute name="title">
+       <string>Stock</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="generatePDFButton">
+     <property name="text">
+      <string>Générer PDF</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
+EOF

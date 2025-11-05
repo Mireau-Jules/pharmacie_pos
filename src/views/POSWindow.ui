@@ -1,0 +1,58 @@
+cat > POSWindow.ui << 'EOF'
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>POSWindow</class>
+ <widget class="QWidget" name="POSWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Point de Vente</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLineEdit" name="searchLineEdit">
+     <property name="placeholderText">
+      <string>Scanner code-barres ou rechercher produit...</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="cartTable"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="totalLabel">
+     <property name="text">
+      <string>Total: 0.00 HTG</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+      <widget class="QPushButton" name="clearButton">
+       <property name="text">
+        <string>Annuler</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="payButton">
+       <property name="text">
+        <string>Payer</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
+EOF
